@@ -9,6 +9,11 @@ body{
     font-family: "League Spartan", sans-serif;
 }
 
+.logo-nav{
+    cursor: pointer;
+    z-index: 999;
+}
+
 main{
     display: flex;
     width: 100%;
@@ -25,12 +30,22 @@ header{
     color: white;
     height: 80vh;
     width: 60%;
-    background-image: url(./images/desktop-image-hero-1.jpg);
+    /* background-image: url(./images/desktop-image-hero-1.jpg); */
     background-size:cover;
     display: flex;
     padding: 30px;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+.img-section img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 
 nav ul{
     display: flex;
@@ -174,3 +189,47 @@ footer{
     display: none;
 }
 
+.img-one{
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.img-two{
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    opacity:0;
+    
+}
+
+.img-three{
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    from {
+        /* left: 0; */
+        opacity: 0;
+    }
+
+    to {
+        /* left: 40px; */
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from{
+        /* left: -40px; */
+        opacity: 1;
+    }
+    to{
+        /* left: 0; */
+        opacity: 0;
+    }
+}
