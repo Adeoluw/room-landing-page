@@ -38,7 +38,7 @@ header{
     position: relative;
 }
 
-.img-section img{
+.img-section > img{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -231,5 +231,88 @@ footer{
     to{
         /* left: 0; */
         opacity: 0;
+    }
+}
+
+
+@media only screen and (max-width: 712px) {
+    main{
+        display: block;
+    }
+
+    header{
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: flex;
+        height: 70px;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    nav ul{
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    nav ul li{
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 15px;
+        padding: 0;
+        font-weight: 700;
+    }
+
+    .close-nav{
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .img-section > img{
+        left: 0;
+        right: 0;
+        width: 100%;
+        aspect-ratio: 3/1;
+    }
+
+    .img-section{
+        width: 100%;
+    }
+
+    .text-section{
+        width: 100%;
+        height: auto;
+    }
+
+    footer{
+        display: block;
+    }
+
+    .foot-img{
+        width: 100%;
+    }
+
+    .about{
+        width: 100%;
+    }
+
+    .left-right{
+        right: 0;
+        left: auto;
     }
 }
