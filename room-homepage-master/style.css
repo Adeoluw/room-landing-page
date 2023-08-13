@@ -30,7 +30,6 @@ header{
     display: flex;
     padding: 30px;
     background-repeat: no-repeat;
-
 }
 
 nav ul{
@@ -42,6 +41,47 @@ nav ul li{
     list-style-type: none;
     margin-right: 40px;
     color: white;
+    position: relative;
+    cursor: pointer;
+    padding: 7px;
+}
+
+/* nav ul li::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 5px;
+    background-color: white;
+    color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 50px;
+
+} */
+
+@keyframes underline{
+    from{width: 0px}
+    to{width: 50px;}
+}
+
+nav ul li:hover::after{
+    display: block;
+    animation-name: underline;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .2s;
+
+    position: absolute;
+        content: "";
+        bottom: 0;
+        left: 5px;
+        background-color: white;
+        color: white;
+        width: 50px;
+        height: 5px;
+        border-radius: 5px;
+        margin-top: 50px;
 }
 
 .text-section{
@@ -120,3 +160,17 @@ footer{
 .about p{
     color: hsl(0, 0%, 63%);
 }
+
+.one{
+    display: block;
+
+}
+
+.two{
+    display: none;
+}
+
+.three{
+    display: none;
+}
+
