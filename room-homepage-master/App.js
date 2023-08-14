@@ -13,7 +13,9 @@ const firstTextPara = document.getElementsByClassName("one")[1];
 const firstImage = document.getElementsByClassName("img-one")[0];
 const secondImage = document.getElementsByClassName("img-two")[0];
 const thirdImage = document.getElementsByClassName("img-three")[0];
-
+const openNav = document.getElementsByClassName("open-nav")[0];
+const closeNav = document.getElementsByClassName("close-nav")[0];
+const nav = document.querySelector("nav")
 
 
 leftArrow.addEventListener("click", () => {
@@ -127,3 +129,19 @@ rightArrow.addEventListener("click", () => {
     // imgSection.style.backgroundImage ="url(./images/desktop-image-hero-1.jpg)";
   }
 });
+
+
+openNav.addEventListener("click", () => {
+    nav.style.opacity = "1"
+    nav.style.animationName = "slidedown"
+    nav.style.zIndex = "9999"
+
+})
+
+closeNav.addEventListener("click", () => {
+    nav.style.opacity = "0"
+    nav.style.animationName = "slideout";
+    nav.style.zIndex = "-1";
+
+
+})

@@ -61,6 +61,10 @@ nav ul li{
     padding: 7px;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+}
 /* nav ul li::after{
     position: absolute;
     content: "";
@@ -241,10 +245,14 @@ footer{
     }
 
     header{
-        justify-content: center;
         display: flex;
         margin: 0;
+        align-items: center;
         width: 100%;
+    }
+
+    .logo-nav{
+        margin-left: 40%;
     }
 
     nav{
@@ -254,11 +262,46 @@ footer{
         right: 0;
         background-color: white;
         display: flex;
-        height: 70px;
+        height: 92px;
         align-items: center;
         padding: 20px;
+        padding-left: 32px;
+        opacity: 0;
+        animation-duration: .5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        z-index: -1;
 
     }
+
+    @keyframes slidedown {
+        0%{
+            height: 0;
+            opacity: 0;
+        }
+        50%{
+            height: 46px;
+            opacity: .5;
+        }
+        100%{
+            height: 92px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideout{
+        from{
+            height: 92px;
+            opacity: 1;
+            z-index: 1;
+        }
+        to{
+            height: 0;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
 
     nav ul{
         margin: 0;
@@ -276,6 +319,26 @@ footer{
         padding: 0;
         font-weight: 700;
     }
+
+
+        nav ul li:hover::after {
+            display: block;
+            animation-name: underline;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: .2s;
+    
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 5px;
+            background-color: transparent;
+            color: transparent;
+            width: 50px;
+            height: 5px;
+            border-radius: 5px;
+            margin-top: 50px;
+        }
 
     .close-nav{
         position: relative;
@@ -315,4 +378,10 @@ footer{
         right: 0;
         left: auto;
     }
+
+    .open-nav{
+        z-index: 999;
+        cursor: pointer;
+    }
 }
+
